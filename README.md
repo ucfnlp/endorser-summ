@@ -1,10 +1,16 @@
 # Getting Started
 ```
-git clone https://github.com/ucfnlp/endorsement.git
-cd endorsement
-./download_data.sh
+# Clone repo and download models
+git clone https://github.com/ucfnlp/endorser-summ.git
+cd endorser-summ
+chmod +x download_pretrained_bart.sh
 ./download_pretrained_bart.sh
+```
 
+Download data and unzip: https://drive.google.com/uc?export=download&id=18kn_yzLIKmBV4rxMhXbuC-0BRocdsG_3
+
+```
+# Create environment and install packages
 conda create -n endorse python=3.8
 conda activate endorse
 conda install pytorch=1.4 cudatoolkit=10.2 -c pytorch -y
@@ -25,9 +31,6 @@ python endorse.py --dataset_name=duc_2004 --endorse_method=bertscore && python e
 CUDA_VISIBLE_DEVICES=1 python preprocess_endorsements_for_training.py --dataset_name=wcep_mds --endorse_method=bertscore && CUDA_VISIBLE_DEVICES=1 python preprocess_endorsements_for_training.py --dataset_name=wcep_mds --endorse_method=bertscore --consolidation_method=sequential
 
 
-wget -N 'https://dl.fbaipublicfiles.com/fairseq/gpt2_bpe/encoder.json'
-wget -N 'https://dl.fbaipublicfiles.com/fairseq/gpt2_bpe/vocab.bpe'
-wget -N 'https://dl.fbaipublicfiles.com/fairseq/gpt2_bpe/dict.txt'
 for SPLIT in train val
 do
   for LANG in source target
