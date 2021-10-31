@@ -1,21 +1,18 @@
 # Getting Started
 ```
-# Clone repo and download models
+# Clone repo and download data and models
 git clone https://github.com/ucfnlp/endorser-summ.git
 cd endorser-summ
-chmod +x download_pretrained_bart.sh
+chmod +x download_data.sh download_pretrained_bart.sh
+./download_data.sh
 ./download_pretrained_bart.sh
-```
 
-Download data and unzip: https://drive.google.com/uc?export=download&id=18kn_yzLIKmBV4rxMhXbuC-0BRocdsG_3
-
-```
 # Create environment and install packages
 conda create -n endorse python=3.8
 conda activate endorse
 conda install pytorch=1.4 cudatoolkit=10.2 -c pytorch -y
-yes | pip install transformers==2.0.0 bert_score spacy scikit-learn tqdm pyrouge nltk absl-py numpy pandas matplotlib Unidecode py-rouge
-pip install --editable . -y
+yes | pip install transformers==2.0.0 bert_score spacy scikit-learn tqdm pyrouge nltk absl-py numpy pandas gdown matplotlib Unidecode py-rouge
+yes | pip install --editable .
 python -m spacy download en_core_web_sm
 ```
 
@@ -23,7 +20,7 @@ python -m spacy download en_core_web_sm
 
 ## Run Endorsement
 ```
-python endorse.py --dataset_name=duc_2004 --endorse_method=bertscore && python endorse.py --dataset_name=duc_2004 --endorse_method=bertscore --consolidation_method=sequential
+python endorse.py --dataset_name=wcep_mds --endorse_method=bertscore && python endorse.py --dataset_name=wcep_mds --endorse_method=bertscore --consolidation_method=sequential
 ```
 
 ## Preprocess

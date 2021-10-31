@@ -243,7 +243,7 @@ def main(unused_argv):
         hypo_file = log_dir + '/' + 'test_fragments.hypo'
         endorse_scores_file = log_dir + '/' + 'endorse_scores_' + dataset_split + '.txt'
         token_ids_file = log_dir + '/' + 'token_ids_' + dataset_split + '.txt'
-        orig_bart_summary_path = FLAGS.dataset_name + '/orig_bart_summaries_' + dataset_split + '.txt'
+        orig_bart_summary_path = 'synopses/' + FLAGS.dataset_name + '/orig_bart_summaries_' + dataset_split + '.txt'
 
         if FLAGS.orig_bart_summarize:
             with open(source_file) as source, open(orig_bart_summary_path, 'w') as fout:
