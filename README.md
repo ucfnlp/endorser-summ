@@ -1,6 +1,6 @@
 # Modeling Endorsement for Multi-Document Abstractive Summarization
 
-Code and data for the Summatization Workshop at EMNLP 2021 paper "Modeling Endorsement for Multi-Document Abstractive Summarization"
+Code and data for the Summatization Workshop at EMNLP 2021 paper "[Modeling Endorsement for Multi-Document Abstractive Summarization](https://arxiv.org/pdf/2110.07844.pdf)"
 
 # Getting Started
 ```
