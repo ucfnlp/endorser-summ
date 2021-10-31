@@ -1,3 +1,7 @@
+# Modeling Endorsement for Multi-Document Abstractive Summarization
+
+Code, data, and models for the Summatization Workshop at EMNLP 2021 paper "Modeling Endorsement for Multi-Document Abstractive Summarization"
+
 # Getting Started
 ```
 # Clone repo and download data and models
