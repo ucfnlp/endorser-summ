@@ -211,7 +211,7 @@ def main(unused_argv):
         raise Exception("Problem with flags: %s" % unused_argv)
 
     if FLAGS.orig_bart_summarize:
-        checkpoints_dir = '../bart.large.cnn'
+        checkpoints_dir = 'bart.large.cnn'
         data_name_or_path = 'cnn_dm'
         bart = BModel.from_pretrained(
             checkpoints_dir + '/',
